@@ -5,7 +5,7 @@ package edu.miracosta.cs113;
  * implementing ListIterator interface.
  *
  *  @author Danny Lee
- *  @version 1.0
+ *  @version 1.1
  */
 
 import java.util.List;
@@ -698,12 +698,6 @@ public class DoubleLinkedList<E> implements List<E> {
                 return dataToReturn;
             }
 
-//            if(nextData.previous != null){
-//                lastDataReturned.previous = nextData.previous;
-//            }else if(nextData.previous == null){
-//                lastDataReturned.previous = null;
-//            }
-
             if(nextData.next != null){
                 lastDataReturned = nextData;
                 lastDataReturned.previous = nextData.previous;
@@ -739,9 +733,6 @@ public class DoubleLinkedList<E> implements List<E> {
             if(!hasPrevious()){
                 throw new NoSuchElementException();
             }
-//            System.out.println("lastDataReturned : " + lastDataReturned);
-//            System.out.println("lastDataReturned.previous : " + lastDataReturned.previous);
-//            System.out.println("lastDataReturned.previous.previous : " + lastDataReturned.previous.previous);
 
 
             nextData = lastDataReturned;
@@ -769,8 +760,7 @@ public class DoubleLinkedList<E> implements List<E> {
             Node<E> nodeBefore;
             Node<E> nodeAfter;
 
-//            System.out.println("lastDataReturned : " + lastDataReturned + " nextData : " + nextData);
-//            System.out.println("lastDataReturned.next : " + lastDataReturned.next);
+
 
             if(lastDataReturned == null){
                 throw new IllegalStateException();
