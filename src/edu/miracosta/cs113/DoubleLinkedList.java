@@ -6,7 +6,7 @@ package edu.miracosta.cs113;
  *
  *  @author Danny Lee
  *  @version 1.1
- *  
+ *
  */
 
 import java.util.List;
@@ -526,9 +526,8 @@ public class DoubleLinkedList<E> implements List<E> {
         }
 
         return "[" + stringToReturn + "]";
-
     }
-
+//////////////////////////////////////////////////////////////////////////////////
     /**
      *Inner class Node
      */
